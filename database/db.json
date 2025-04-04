@@ -1,0 +1,40 @@
+{
+  "projects": [
+    {
+      "id": "1",
+      "title": "project title 1",
+      "detail": "project detail 1",
+      "status": "complete"
+    },
+    {
+      "id": "2",
+      "title": "project title 2",
+      "detail": "project detail 2",
+      "status": "inprogress"
+    },
+    {
+      "id": "3",
+      "title": "project title 3",
+      "detail": "project detail 3",
+      "status": "pending"
+    },
+    {
+      "id": "97a8",
+      "title": "title 4",
+      "detail": "description 4",
+      "status": "complete"
+    },
+    {
+      "id": "753f",
+      "title": "Smart Home Automation",
+      "detail": "A system that allows users to control home appliances remotely using IoT technology.",
+      "status": "pending"
+    },
+    {
+      "id": "a9fc",
+      "title": "Job Portal",
+      "detail": "A recruitment platform connecting employers with job seekers, featuring resume uploads and job applications.",
+      "status": "pending"
+    }
+  ]
+}
