@@ -17,10 +17,12 @@
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
           <li class="nav-item active">
-            <RouterLink to="/" class="nav-link">Projects</RouterLink>
+            <RouterLink :to="{ name: 'home' }" class="nav-link"
+              >Projects</RouterLink
+            >
           </li>
           <li class="nav-item">
-            <RouterLink to="/add-project" class="nav-link"
+            <RouterLink :to="{ name: 'addProject' }" class="nav-link"
               >Add Project</RouterLink
             >
           </li>

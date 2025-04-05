@@ -16,6 +16,7 @@ import SingleProject from "../components/SingleProject.vue";
 export default {
   data() {
     return {
+      api: "http://localhost:3000/projects",
       projects: [],
     };
   },
@@ -37,13 +38,12 @@ export default {
     },
   },
   mounted() {
-    fetch("http://localhost:3000/projects")
+    fetch(`${this.api}`)
       .then((response) => {
         return response.json();
       })
       .then((data) => {
         this.projects = data;
-        console.log(this.projects);
       })
       .catch((error) => {
         console.log(error);

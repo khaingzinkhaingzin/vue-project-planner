@@ -2,26 +2,26 @@
   "projects": [
     {
       "id": "1",
-      "title": "project title 1",
-      "detail": "project detail 1",
-      "status": "complete"
+      "title": "AI Chatbot for Customer Support",
+      "detail": "An AI-powered chatbot that assists customers with inquiries and troubleshooting in real time.",
+      "status": "pending"
     },
     {
       "id": "2",
-      "title": "project title 2",
-      "detail": "project detail 2",
+      "title": "Online Marketplace",
+      "detail": "A multi-vendor platform where users can buy and sell products securely. updated.",
       "status": "inprogress"
     },
     {
       "id": "3",
-      "title": "project title 3",
-      "detail": "project detail 3",
+      "title": "Task Management App",
+      "detail": "A web-based task management application that helps users organize and prioritize their work efficiently.",
       "status": "pending"
     },
     {
       "id": "97a8",
-      "title": "title 4",
-      "detail": "description 4",
+      "title": "Hospital Management System",
+      "detail": "A system to manage hospital operations, including patient records, appointments, and billing. updated.",
       "status": "complete"
     },
     {
@@ -34,6 +34,18 @@
       "id": "a9fc",
       "title": "Job Portal",
       "detail": "A recruitment platform connecting employers with job seekers, featuring resume uploads and job applications.",
+      "status": "inprogress"
+    },
+    {
+      "id": "b589",
+      "title": "Fitness Tracking App",
+      "detail": "A mobile application to track daily workouts, diet, and progress over time.",
+      "status": "pending"
+    },
+    {
+      "id": "2b7c",
+      "title": "Restaurant Ordering System",
+      "detail": "An app for customers to browse menus, place orders, and make payments online.",
       "status": "pending"
     }
   ]

@@ -13,6 +13,12 @@ const router = createRouter({
       name: "addProject",
       component: () => import("../views/AddProjectView.vue"),
     },
+    {
+      path: "/edit-project/:id",
+      name: "editProject",
+      component: () => import("../views/EditProjectView.vue"),
+      props: true,
+    },
   ],
 });
 

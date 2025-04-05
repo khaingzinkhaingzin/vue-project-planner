@@ -2,9 +2,9 @@
   <div
     class="project card mb-3 px-3 py-3"
     :class="{
-      pending: this.project.status === 'pending',
-      inprogress: this.project.status === 'inprogress',
-      complete: this.project.status === 'complete',
+      pending: project.status === 'pending',
+      inprogress: project.status === 'inprogress',
+      complete: project.status === 'complete',
     }"
   >
     <div class="d-flex justify-content-between align-items-center">
@@ -15,7 +15,13 @@
         <span class="material-symbols-outlined delete" @click="deleteProject">
           delete
         </span>
-        <span class="material-symbols-outlined edit"> edit </span>
+        <RouterLink
+          :to="{ name: 'editProject', params: { id: project.id } }"
+          class="nav-link"
+          ><span class="material-symbols-outlined edit">
+            edit
+          </span></RouterLink
+        >
         <select class="form-control" v-model="status" @change="changeStatus">
           <option value="pending">pending</option>
           <option value="inprogress">inprogress</option>
@@ -87,11 +93,11 @@ h4 {
 .action span:hover {
   color: #909090;
 }
-.action > .delete {
+.action .delete {
   cursor: pointer;
   color: red;
 }
-.action > .edit {
+.action .edit {
   cursor: pointer;
   color: rgb(237, 187, 81);
 }
