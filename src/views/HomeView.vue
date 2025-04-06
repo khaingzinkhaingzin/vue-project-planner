@@ -1,6 +1,7 @@
 <template>
+  <FilterNav class="mb-3" @filterValue="filter = $event"></FilterNav>
   <div v-if="projects">
-    <div v-for="project in projects" :key="project.id">
+    <div v-for="project in filteredProjects" :key="project.id">
       <SingleProject
         :project="project"
         @deleted="deleteProject"
@@ -11,6 +12,7 @@
 </template>
 
 <script>
+import FilterNav from "../components/FilterNav.vue";
 import Navbar from "../components/Navbar.vue";
 import SingleProject from "../components/SingleProject.vue";
 export default {
@@ -18,9 +20,11 @@ export default {
     return {
       api: "http://localhost:3000/projects",
       projects: [],
+      filter: "all",
     };
   },
   components: {
+    FilterNav,
     Navbar,
     SingleProject,
   },
@@ -35,6 +39,19 @@ export default {
         return project.id === id;
       });
       project.status = status;
+    },
+  },
+  computed: {
+    filteredProjects() {
+      console.log(this.filter);
+
+      if (this.filter !== "all") {
+        return this.projects.filter((project) => {
+          return project.status === this.filter;
+        });
+      }
+
+      return this.projects;
     },
   },
   mounted() {
